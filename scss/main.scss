@@ -1,0 +1,81 @@
+@mixin use-font {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+}
+
+@mixin box-shadow-custom {
+	-webkit-text-shadow: 0px 2px 18px rgba(50, 50, 50, 0.29);
+	-moz-text-shadow:    0px 2px 18px rgba(50, 50, 50, 0.29);
+	text-shadow:         0px 2px 18px rgba(50, 50, 50, 0.29);
+}
+
+/**
+ * Header
+ */
+header {
+	background: url('../images/header.jpg') center top no-repeat;
+	height: 900px;
+	color: white;
+}
+
+h1 {
+	@include use-font;
+	@include box-shadow-custom;
+	font-size: 6em;
+	margin-top: 0.4em;
+	margin-bottom: 0.6em;	
+}
+
+header p {
+	@include use-font;
+	@include box-shadow-custom;
+	font-size: 1.4em;
+	margin-bottom: 2.2em;
+}
+
+$overlay-padding: 30px;
+
+.overlay {
+	height: (87 + $overlay-padding * 2)px;
+	padding: $overlay-padding;
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+a.download-badge {
+	text-indent: -9999px;
+	background-image: url('../images/scarica-app-store.png');
+	width: 275px;
+	height: 87px;
+	display: block;
+	
+	&:hover {
+		background-position: 0px -87px;
+	}
+}
+
+/**
+ * Phone + icon
+ */
+.phone-icon {
+	margin-top: 1em;
+	width: 316px;
+	height: 644px;
+	background: url('../images/phone-icon.png') left top no-repeat;
+	float: right;
+}
+
+/**
+ * General use
+ */
+.container {
+	max-width: 1140px;
+	margin: 0 auto;
+}
+
+.frame.can-flow::after {
+	clear: none;
+}
+
+.bit-60 {width:60%}
+.bit-40 {width:40%}
