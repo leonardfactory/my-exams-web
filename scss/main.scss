@@ -12,6 +12,7 @@
 body {
 	@include use-font;
 	background: url('../images/header.jpg') center top no-repeat;
+	background-position-y: -120px;
 }
 
 /**
@@ -19,21 +20,21 @@ body {
  */
 header {
 	color: white;
-}
-
-h1 {
-	@include use-font;
-	@include box-shadow-custom;
-	font-size: 6em;
-	margin-top: 0.4em;
-	margin-bottom: 0.6em;	
-}
-
-header p {
-	@include use-font;
-	@include box-shadow-custom;
-	font-size: 1.4em;
-	margin-bottom: 2.2em;
+	
+	h1 {
+		@include use-font;
+		@include box-shadow-custom;
+		font-size: 6em;
+		margin-top: 0.4em;
+		margin-bottom: 0.6em;	
+	}
+	
+	p {
+		@include use-font;
+		@include box-shadow-custom;
+		font-size: 1.4em;
+		margin-bottom: 2.2em;
+	}
 }
 
 $overlay-padding: 30px;
@@ -55,6 +56,10 @@ a.download-badge {
 	&:hover {
 		background-position: 0px -87px;
 	}
+	
+	&.centered-badge {
+		margin: 0 auto;
+	}
 }
 
 /**
@@ -75,6 +80,10 @@ a.download-badge {
 .container {
 	max-width: 1140px;
 	margin: 0 auto;
+	
+	&.container-padded {
+		padding: 30px 0;
+	}
 }
 
 .frame.can-flow::after {
@@ -101,8 +110,7 @@ a.download-badge {
 		background: url('../images/phone.png') left top no-repeat;
 		width: 245px;
 		height: 515px;
-		float: right;
-		margin-right: 6em;
+		float: left;
 		
 		.screen {
 			position: relative;
@@ -119,20 +127,22 @@ a.download-badge {
 		height: 70px;
 		display: inline-block;
 		vertical-align: middle;
+		margin-left: 30px;
 	}
 	
 	h2 {
 		vertical-align: middle;
 		display: inline-block;
-		font-size: 2.2em;
-		font-weight: 200;
-		margin-left: 0.4em;
+		font-size: 2.8em;
+		color: #35a9e6;
+		font-weight: 400;
 	}
 	
 	p {
 		margin-top: 2em;
 		font-size: 1.4em;
-		color: #585858;
+		font-weight: 200;
+		color: #747474;
 	}
 }
 
@@ -150,7 +160,7 @@ a.download-badge {
 	}
 	
 	h2 {
-		color: #ab206f;
+		color: #35a9e6;
 	}
 }
 
@@ -167,7 +177,33 @@ a.download-badge {
 	}
 	
 	h2 {
-		color: #1e89c1;
+		color: #35a9e6;
+	}
+}
+
+/**
+ * Feature: Calculate
+ */
+.feature.calc {
+	.screen {
+		background: url('../images/screen/calc.gif') left top no-repeat;
+	}
+	
+	.icon {
+		background: url('../images/feature/calc.png') no-repeat;
+	}
+}
+
+/**
+ * Feature: Customize
+ */
+.feature.customize {
+	.screen {
+		background: url('../images/screen/customize.gif') left top no-repeat;
+	}
+	
+	.icon {
+		background: url('../images/feature/customize.png') no-repeat;
 	}
 }
 
@@ -175,5 +211,203 @@ a.download-badge {
 	padding-top: 4em;
 }
 
-.bit-60 {width:60%}
-.bit-40 {width:40%}
+/**
+ * Sizing
+ */
+
+.bit-big {
+	width:68%
+}
+.bit-small {
+	width:32%;
+	
+	&.left {
+		.phone {
+			float: left;
+		}
+	}
+	
+	&.right {
+		.phone {
+			float: right;
+		}
+	}
+}
+
+/**
+ * Footer
+ */
+footer {
+	background-color: #f1f2f4;
+	
+	p {
+		padding-top: 1.8em;
+		text-align: center;
+		color: #afafaf;
+		line-height: 1.2em;
+	}
+	
+	a {
+		color: #47b1e8;
+		text-decoration: none;
+		
+		&:hover {
+			color: #2592ca;
+			text-decoration: none;
+		}
+		
+		&:visited {
+			text-decoration: none;
+		}
+	}
+}
+
+///////////////////////////////////
+// Media Queries
+///////////////////////////////////
+
+@media (max-width: 1200px) {
+	header {
+		h1 {
+			margin-left: $overlay-padding;
+		}
+		
+		p {
+			margin-left: $overlay-padding;
+		}
+	}
+	
+	.container {
+		padding: 2em;
+	}
+	
+	.overlay {
+		.container {
+			padding: 0;
+		}
+		
+		padding-left: 4em;
+	}
+	
+	.feature {
+		margin-top: 2em;
+		margin-bottom: 2em;
+		padding: 0 4em;
+	}
+}
+
+@media (max-width: 1024px) {
+	.phone-icon {
+		max-width: 100%;
+		max-height: 100%;
+		background-size: contain;
+	}
+	
+	header {
+		
+		h1 {
+			font-size: 4.2em;
+		}
+		
+		p {
+			font-size: 1.2em;
+			margin-bottom: 1.2em;
+		}
+	}
+	
+	.feature:first-of-type {
+		margin-top: -6em;
+	}
+	
+	.feature {
+		.bit-big {
+			width: 100%;
+			float: left;
+		}
+		
+		.bit-small {
+			width: 100%;
+			float: right;
+		}
+		
+		.phone {
+			margin: 0 auto;
+			margin-top: 4em;
+			float: none !important;
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.feature:first-of-type {
+		margin-top: 4em;
+	}
+	
+	body {
+		background-position-y: -220px;
+	}
+	
+	.feature {
+		h2 {
+			font-size: 2em;
+		}
+		
+		.icon {
+			max-width: 100%;
+			max-height: 100%;
+			width: 35px;
+			height: 35px;
+			background-size: contain !important;
+			margin-left: 0;
+			display: block;
+			float: right;
+		}
+	}
+	
+	.bit-big {
+		width: 100%;
+	}
+	
+	.phone-icon {
+		display: none;
+	}
+}
+
+@media (max-width: 480px) {
+	
+	.container {
+		padding: 1em;
+	}
+	
+	header {
+		h1 {
+			text-align: center;
+			font-size: 2.6em;
+			margin-left: 0;
+		}
+		
+		p {
+			text-align: center;
+			margin-left: 0;
+		}
+		
+		.overlay {
+			padding: 30px 0;
+		}
+	}
+	
+	a.download-badge {
+		margin: 0 auto;
+	}
+	
+	.feature {
+		h2 {
+			font-size: 1.4em;
+		}
+		
+		p {
+			font-size: 1em;
+		}
+	}
+	
+}
