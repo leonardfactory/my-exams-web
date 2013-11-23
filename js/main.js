@@ -1,10 +1,9 @@
 $(document).ready(function()
 {
 	var win = $(window);
-	var isSmall = win.width() < 1024;
-	win.resize(function () 
+	
+	var resizeWithWidth = function(width)
 	{
-		var width = win.width();
 		if(width < 1024 && !isSmall)
 		{
 			$('.bit-small.left').each(function()
@@ -23,5 +22,17 @@ $(document).ready(function()
 			});
 			isSmall = false;
 		}
+	}
+	
+	var isSmall = win.width() < 1024;
+	if(isSmall)
+	{
+		// Force redrawing
+		isSmall = !isSmall;
+		resizeWithWidth(win.width());
+	}
+	
+	win.resize(function(){
+		resizeWithWidth(win.width());
 	});
 });

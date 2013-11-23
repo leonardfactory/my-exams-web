@@ -407,15 +407,18 @@ footer a:visited {
   /* line 419, ../scss/main.scss */
   a.download-badge {
     background-image: url("../images/scarica-app-store@2x.png");
+    background-size: 275px 174px;
   }
 
-  /* line 424, ../scss/main.scss */
+  /* line 425, ../scss/main.scss */
   .feature .phone {
     background-image: url("../images/phone@2x.png");
+    background-size: 245px 515px;
   }
 
-  /* line 429, ../scss/main.scss */
+  /* line 431, ../scss/main.scss */
   .phone-icon {
     background-image: url("../images/phone-icon@2x.png");
+    background-size: 316px 644px;
   }
 }
