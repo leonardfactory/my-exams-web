@@ -9,12 +9,15 @@
 	text-shadow:         0px 2px 18px rgba(50, 50, 50, 0.29);
 }
 
+body {
+	@include use-font;
+	background: url('../images/header.jpg') center top no-repeat;
+}
+
 /**
  * Header
  */
 header {
-	background: url('../images/header.jpg') center top no-repeat;
-	height: 900px;
 	color: white;
 }
 
@@ -63,6 +66,7 @@ a.download-badge {
 	height: 644px;
 	background: url('../images/phone-icon.png') left top no-repeat;
 	float: right;
+	margin-right: $overlay-padding;
 }
 
 /**
@@ -75,6 +79,100 @@ a.download-badge {
 
 .frame.can-flow::after {
 	clear: none;
+}
+
+.clr {
+	clear: both;
+}
+
+/**
+ * Sections for features
+ */
+.feature:first-of-type {
+	margin-top: 7em;
+}
+
+.feature {
+	
+	margin-top: 5em;
+	margin-bottom: 5em;
+	
+	.phone {
+		background: url('../images/phone.png') left top no-repeat;
+		width: 245px;
+		height: 515px;
+		float: right;
+		margin-right: 6em;
+		
+		.screen {
+			position: relative;
+			top: 76px;
+			left: 21px;
+			width: 206px;
+			height: 365px;
+		}
+	}
+	
+	// Symbols
+	.icon {
+		width: 70px;
+		height: 70px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+	
+	h2 {
+		vertical-align: middle;
+		display: inline-block;
+		font-size: 2.2em;
+		font-weight: 200;
+		margin-left: 0.4em;
+	}
+	
+	p {
+		margin-top: 2em;
+		font-size: 1.4em;
+		color: #585858;
+	}
+}
+
+
+/**
+ * Feature: Exams
+ */
+.feature.exams {
+	.screen {
+		background: url('../images/screen/exams.gif') left top no-repeat;
+	}
+	
+	.icon {
+		background: url('../images/feature/check.png') no-repeat;
+	}
+	
+	h2 {
+		color: #ab206f;
+	}
+}
+
+/**
+ * Feature: Forecast
+ */
+.feature.forecast {
+	.screen {
+		background: url('../images/screen/forecast.gif') left top no-repeat;
+	}
+	
+	.icon {
+		background: url('../images/feature/forecast.png') no-repeat;
+	}
+	
+	h2 {
+		color: #1e89c1;
+	}
+}
+
+.padded {
+	padding-top: 4em;
 }
 
 .bit-60 {width:60%}

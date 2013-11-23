@@ -1,14 +1,19 @@
+/* line 12, ../scss/main.scss */
+body {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+  background: url("../images/header.jpg") center top no-repeat;
+}
+
 /**
  * Header
  */
-/* line 15, ../scss/main.scss */
+/* line 20, ../scss/main.scss */
 header {
-  background: url("../images/header.jpg") center top no-repeat;
-  height: 900px;
   color: white;
 }
 
-/* line 21, ../scss/main.scss */
+/* line 24, ../scss/main.scss */
 h1 {
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
@@ -20,7 +25,7 @@ h1 {
   margin-bottom: 0.6em;
 }
 
-/* line 29, ../scss/main.scss */
+/* line 32, ../scss/main.scss */
 header p {
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
@@ -31,7 +36,7 @@ header p {
   margin-bottom: 2.2em;
 }
 
-/* line 38, ../scss/main.scss */
+/* line 41, ../scss/main.scss */
 .overlay {
   height: 147px px;
   padding: 30px;
@@ -39,7 +44,7 @@ header p {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-/* line 45, ../scss/main.scss */
+/* line 48, ../scss/main.scss */
 a.download-badge {
   text-indent: -9999px;
   background-image: url("../images/scarica-app-store.png");
@@ -47,7 +52,7 @@ a.download-badge {
   height: 87px;
   display: block;
 }
-/* line 52, ../scss/main.scss */
+/* line 55, ../scss/main.scss */
 a.download-badge:hover {
   background-position: 0px -87px;
 }
@@ -55,35 +60,129 @@ a.download-badge:hover {
 /**
  * Phone + icon
  */
-/* line 60, ../scss/main.scss */
+/* line 63, ../scss/main.scss */
 .phone-icon {
   margin-top: 1em;
   width: 316px;
   height: 644px;
   background: url("../images/phone-icon.png") left top no-repeat;
   float: right;
+  margin-right: 30px;
 }
 
 /**
  * General use
  */
-/* line 71, ../scss/main.scss */
+/* line 75, ../scss/main.scss */
 .container {
   max-width: 1140px;
   margin: 0 auto;
 }
 
-/* line 76, ../scss/main.scss */
+/* line 80, ../scss/main.scss */
 .frame.can-flow::after {
   clear: none;
 }
 
-/* line 80, ../scss/main.scss */
+/* line 84, ../scss/main.scss */
+.clr {
+  clear: both;
+}
+
+/**
+ * Sections for features
+ */
+/* line 91, ../scss/main.scss */
+.feature:first-of-type {
+  margin-top: 7em;
+}
+
+/* line 95, ../scss/main.scss */
+.feature {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+/* line 100, ../scss/main.scss */
+.feature .phone {
+  background: url("../images/phone.png") left top no-repeat;
+  width: 245px;
+  height: 515px;
+  float: right;
+  margin-right: 6em;
+}
+/* line 107, ../scss/main.scss */
+.feature .phone .screen {
+  position: relative;
+  top: 76px;
+  left: 21px;
+  width: 206px;
+  height: 365px;
+}
+/* line 117, ../scss/main.scss */
+.feature .icon {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 124, ../scss/main.scss */
+.feature h2 {
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 2.2em;
+  font-weight: 200;
+  margin-left: 0.4em;
+}
+/* line 132, ../scss/main.scss */
+.feature p {
+  margin-top: 2em;
+  font-size: 1.4em;
+  color: #585858;
+}
+
+/**
+ * Feature: Exams
+ */
+/* line 144, ../scss/main.scss */
+.feature.exams .screen {
+  background: url("../images/screen/exams.gif") left top no-repeat;
+}
+/* line 148, ../scss/main.scss */
+.feature.exams .icon {
+  background: url("../images/feature/check.png") no-repeat;
+}
+/* line 152, ../scss/main.scss */
+.feature.exams h2 {
+  color: #ab206f;
+}
+
+/**
+ * Feature: Forecast
+ */
+/* line 161, ../scss/main.scss */
+.feature.forecast .screen {
+  background: url("../images/screen/forecast.gif") left top no-repeat;
+}
+/* line 165, ../scss/main.scss */
+.feature.forecast .icon {
+  background: url("../images/feature/forecast.png") no-repeat;
+}
+/* line 169, ../scss/main.scss */
+.feature.forecast h2 {
+  color: #1e89c1;
+}
+
+/* line 174, ../scss/main.scss */
+.padded {
+  padding-top: 4em;
+}
+
+/* line 178, ../scss/main.scss */
 .bit-60 {
   width: 60%;
 }
 
-/* line 81, ../scss/main.scss */
+/* line 179, ../scss/main.scss */
 .bit-40 {
   width: 40%;
 }
