@@ -430,6 +430,11 @@ only screen and (min-device-pixel-ratio: 1.5) {
 		}
 	}
 	
+	.feature.exams 		.screen { background-image: url('../images/screen/exams@2x.gif'); }
+	.feature.calc 		.screen { background-image: url('../images/screen/calc@2x.gif'); }
+	.feature.customize 	.screen { background-image: url('../images/screen/customize@2x.gif'); }
+	.feature.forecast 	.screen { background-image: url('../images/screen/forecast@2x.gif'); }
+	
 	.phone-icon {
 		background-image: url('../images/phone-icon@2x.png');
 		background-size: 316px 644px;

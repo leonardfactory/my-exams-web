@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 		'* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
 		' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
 		// Task configuration.
-		concat: {
+		/*concat: {
 			options: {
 				banner: '<%= banner %>',
 				stripBanners: true
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
 				src: '<%= concat.dist.dest %>',
 				dest: 'js/<%= pkg.name %>.min.js'
 			}
-		},
+		},*/
 		jshint: {
 			options: {
 				curly: true,
@@ -57,12 +57,6 @@ module.exports = function(grunt) {
 					cssDir: 'css',
 					environment: 'development'
 				}
-			},
-			dev: {                    // Another target
-				options: {
-					sassDir: 'sass',
-					cssDir: 'css'
-				}
 			}
 		},
 		watch: {
@@ -85,6 +79,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-compass');
 
 	// Default task.
-	grunt.registerTask('default', ['jshint', 'compass', 'concat', 'uglify']);
+	grunt.registerTask('default', ['jshint', 'compass']);
 
 };

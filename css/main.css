@@ -419,6 +419,26 @@ footer a:visited {
   }
 
   /* line 433, ../scss/main.scss */
+  .feature.exams .screen {
+    background-image: url("../images/screen/exams@2x.gif");
+  }
+
+  /* line 434, ../scss/main.scss */
+  .feature.calc .screen {
+    background-image: url("../images/screen/calc@2x.gif");
+  }
+
+  /* line 435, ../scss/main.scss */
+  .feature.customize .screen {
+    background-image: url("../images/screen/customize@2x.gif");
+  }
+
+  /* line 436, ../scss/main.scss */
+  .feature.forecast .screen {
+    background-image: url("../images/screen/forecast@2x.gif");
+  }
+
+  /* line 438, ../scss/main.scss */
   .phone-icon {
     background-image: url("../images/phone-icon@2x.png");
     background-size: 316px 644px;
